@@ -7,7 +7,46 @@
   </head>
   <body>
 
-    <div class="border">border: this is a single html div element and single css class</div>
+    <div class="border">The border class:<br />
+      This turquoise with a red border box is a single html div element with
+      a single css class attached to it.<br />
+      On the css we created two classes, border and background with a single font property.
+      The font property applies to both classes.
+    <code>
+      .border,<br />
+      .background {<br />
+        &nbsp;&nbsp;font-weight: 800;<br />
+      }
+    </code>
+    The background class is also declared alongside the border class
+    and has the same font-weight property but it has no effect on
+    this element because we are already calling the border class and it is
+    responsible to handle the font-weight on this instance:
+      <code>
+      &lt;div class="border"&gt;&lt;/div&gt;
+      </code>
+
+      How come we have a green background and a red border then? Where does it come from?
+      That's when the CSS hierarchy comes into play. These color and other properties
+      we declare them on another .border class.
+      That means we can use the font-weight in two classes and leave the other border
+      properties on its own class:
+
+      <code>
+        .border {<br />
+          &nbsp;&nbsp;width: auto;<br />
+          &nbsp;&nbsp;height: auto;<br />
+          &nbsp;&nbsp;background: white;<br />
+          &nbsp;&nbsp;padding: 10px;<br />
+          &nbsp;&nbsp;border: 1px solid red;<br />
+          &nbsp;&nbsp;background: turquoise;<br />
+        }
+      </code>
+
+
+
+    </div>
+
     <div class="background">background</div>
     <div class="border background">border background</div>
     <div class="background"><p class="border">background border</p></div>
