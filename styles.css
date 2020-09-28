@@ -1,62 +1,88 @@
 body {
   font-family: arial, helvetica, sans-serif;
   line-height: 1.5;
+  margin: 1.5em;
 }
 code {
+  background: #fff9;
+  border: 1px solid #3335;
+  border-radius: 4px;
   display: block;
   font-family: monospace;
   font-size: 12px;
   font-weight: 400;
-  background: #fff9;
-  padding: 1em;
-  border: 1px solid #3335;
-  margin: 1em 0;
-  width: max-content;
   height: auto;
-  border-radius: 4px;
+  padding: 1em;
+  margin: 1.5em 0;
+  width: max-content;
 }
 
 /* handles only the font property for both classes */
 .border, .background {
   font-weight: 500;
+  margin: 1em auto;
 }
 
+/* single class: border */
 .border {
+  background: azure;
+  border: 1px solid red;
+  border-radius: 4px;
   width: auto;
   height: auto;
-  background: white;
   padding: 10px;
-  border: 1px solid red;
-  background: turquoise;
 }
 
+/* single class: background */
 .background {
   background: #5552;
-  margin: 5px;
   border: 2px dashed green;
   padding: 20px;
 }
 
+/*
+chaining classes
+select all the elements that has
+the border class and also the background class
+*/
 .border.background {
+  background: #ff45;
   font-style: italic;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
+/*
+it means that even the order of the classes
+below are switched, it will apply all the styles
+from above and below, to all the elements that
+have class="border background", no matter in
+which order they are called.
+ */
 .background.border {
  text-decoration: underline;
- color: tomato;
+ color: darkorange;
 }
 
+/*
+here we need two html elements for these classes
+to work. The parent element will receive the
+first class and the child element will receive
+the second class.
+the css engine will interpret it from left to right
+and top to bottom.
+hierarchy still applies.
+*/
 .background .border {
-  margin: 0 auto;
-  padding: 2px;
-  width: auto;
-  height: auto;
-  background: pink;
+  background: #3063c955;
   font-weight: 900;
   font-size: 20px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
+  height: auto;
+  width: max-content;
+  margin: 0 auto;
+  padding: .5em;
 }
 
 .border .background {
@@ -69,4 +95,8 @@ code {
   font-size: 16px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.space {
+  margin: 5em auto;
 }
