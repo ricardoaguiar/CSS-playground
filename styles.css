@@ -15,6 +15,7 @@ code {
   padding: 1em;
   margin: 1.5em 0;
   width: max-content;
+  text-decoration: none;
 }
 
 /* handles only the font property for both classes */
@@ -52,6 +53,7 @@ the border class and also the background class
   text-transform: uppercase;
 }
 
+
 /*
 it means that even the order of the classes
 below are switched, it will apply all the styles
@@ -64,13 +66,13 @@ which order they are called.
  color: darkorange;
 }
 
+
+
 /*
 here we need two html elements for these classes
 to work. The parent element will receive the
 first class and the child element will receive
 the second class.
-the css engine will interpret it from left to right
-and top to bottom.
 hierarchy still applies.
 */
 .background .border {
@@ -97,6 +99,12 @@ hierarchy still applies.
   text-align: center;
 }
 
+#comment {
+  text-transform: lowercase;
+  text-decoration: none;
+  width: max-content;
+  color: #333;
+}
 .space {
   margin: 5em auto;
 }
