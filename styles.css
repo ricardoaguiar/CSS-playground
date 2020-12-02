@@ -108,3 +108,7 @@ hierarchy still applies.
 .space {
   margin: 5em auto;
 }
+
+p {
+font-weight: 900;
+}
