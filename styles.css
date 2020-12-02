@@ -2,6 +2,7 @@ body {
   font-family: arial, helvetica, sans-serif;
   line-height: 1.5;
   margin: 1.5em;
+  width: 70vw;
 }
 code {
   background: #fff9;
