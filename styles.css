@@ -46,6 +46,7 @@ chaining classes
 select all the elements that has
 the border class and also the background class
 */
+
 .border.background {
   background: #ff45;
   font-style: italic;
